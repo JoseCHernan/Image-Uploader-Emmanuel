@@ -1,0 +1,21 @@
+@use 'base/variables' as v;
+
+*,*::before, *::after{
+    box-sizing: inherit;
+}
+
+html{
+    font-size: 62.5%;
+    box-sizing: border-box;
+    height: 100%;
+}
+
+body{
+    font-family: v.$font;
+    font-size: 1.6rem;
+    min-height: 100%;
+}
+
+img{
+    max-width: 100%;
+}

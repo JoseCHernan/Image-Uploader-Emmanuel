@@ -1,0 +1,203 @@
+@use 'base/variables' as v;
+
+body{
+    background-color: v.$body;
+    display: grid;
+    place-content: center;
+    text-align: center;
+    font-weight: 500;
+    color: v.$gray;
+
+    main{
+        display: grid;
+        place-content: center;
+        padding: 2rem;
+        text-align: center;
+        background-color: v.$white;
+        box-shadow: 0px 1px 12px -1px rgba(0,0,0, 0.2);
+        width: 40.2rem;
+        height: 46.9rem;
+        border-radius: 1.2rem;
+
+        h2{
+            color: v.$gray2;
+            font-size: 1.5rem;
+        }
+    }
+    .btn{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto;
+        width: 10.1rem;
+        height: 3.198rem;
+        border-radius: .8rem;
+        background-color: v.$blue;
+        color: v.$white;
+        border: none;
+        font-size: 1.3rem;
+        padding: 0.5rem;
+        position: relative;
+        &:hover{
+            cursor: pointer;
+        }
+
+        &[type=file]{
+            cursor: inherit;
+            display: block;
+            filter: alpha(opacity=0);
+            min-height: 100%;
+            min-width: 50%;
+            opacity: 0;
+            position: absolute;
+            right: 0;
+            left: 0;
+            text-align: right;
+            top: 0;
+
+            &:hover{
+                cursor: pointer;
+            }
+        }
+
+    }
+
+}
+
+.choose{
+    margin-top: 3rem;
+}
+
+footer{
+    margin-top: 3rem;
+}
+
+.card-your-image{
+    width: 33.8rem;
+    height: 30rem;
+    padding: 1rem;
+    font-size: 1.3rem;
+
+    .image-content-drag-drop{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+        width: 33.8rem;
+        height: 21.89rem;
+        border-radius: 1rem;
+        margin: 2rem 0;
+        text-align: center;
+        background-color: v.$gray4;
+        border: .25rem dashed v.$purple;
+
+        img{
+            width: 11.41rem;
+        }
+    }
+}
+
+.loading{
+    width: 34.07rem;
+    height: .6rem;
+    border-radius: .8rem;
+    background-color: #f2f2f2;
+    .bar{
+        width: 10.93rem;
+        height: .6rem;
+        border-radius: .8rem;
+        background-color: v.$blue;
+        animation: 1.5s loader 0.5 ease-in-out;
+    }
+}
+
+.succes{
+    margin: 0 auto;
+    svg{
+        width: 3.5rem;
+    }
+
+.contentURL{
+    position: relative;
+    width: 33.8rem;
+    height: 3.4rem;
+    padding: 1rem;
+    border-radius: .8rem;
+    background-color: #f6f8fb;
+    border: 1px solid #e0e0e0;
+    margin-bottom: 2rem;
+    display: flex;
+    align-items: center;
+
+    input{
+        background-color: #f6f8fb;
+        width: 24rem;
+        border: none;
+        overflow: hidden;
+        text-overflow: ellipsis;
+
+        &:focus{
+            outline: none;
+        }
+    }
+}
+
+.contentURLCopy{
+    width: 7.4rem;
+    height: auto;
+    border-radius: .8rem;
+    background-color: v.$blue;
+    color: v.$white;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    font-size: 1.2rem;
+    padding: 1rem 0;
+    border: none;
+
+    &:hover{
+        cursor: pointer;
+    }
+}
+
+}
+
+@keyframes loader{
+    0%{
+        transform: translateX(0px);
+    }
+
+    10%{
+        transform: translateX(30px);
+    }
+
+    25%{
+        transform: translateX(80px);
+    }
+
+    40%{
+        transform: translateX(130px);
+    }
+
+    50%{
+        transform: translateX(150px);
+    }
+
+    60%{
+        transform: translateX(170px);
+    }
+
+    75%{
+        transform: translateX(200x);
+    }
+
+    90%{
+        transform: translateX(220px);
+    }
+
+    100%{
+        transform: translateX(230px);
+    }
+}
